@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site completo usando HTML e CSS </title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600&family=M+PLUS+Rounded+1c:wght@500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,500;6..12,900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,600;1,700&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header id="inicio"><!-- #header -->
+        <section class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="img/logo.png" class="logo_img" alt="logo">
+                </div>
+                <div class="header-text">
+                    <h1>O Propósito é Ensinar, <br> Promover Aprendizado</h1>
+
+                    <span class="sqaure"></span>
+                    <p>Trabalhamos para oferecer experiências educacionais significativas e inspiradoras.</p>
+
+
+                    <button class="common-btn">
+                        Saiba Mais
+                    </button>
+
+                    <div class="line">
+                        <span class="line-1"></span><br>
+                        <span class="line-2"></span><br>
+                        <span class="line-3"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <nav id="sideNav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#about">Sobre nós</a></li>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#offer">Ofertas</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <img src="img/menu.png" title="img" onclick=(FarMenuBtn()) id="menuBtn">
+
+            <script>
+                var VarMenuBtn = document.getElementById("menuBtn"); // variavel para amarrar com onclick
+                var VarSideNav = document.getElementById("sideNav"); // 
+
+                /* 1 - faz variável
+                   2 - alerou stayler - 250px direita.   
+                   3 - se    
+                */
+
+                VarSideNav.style.right = "-250px";
+
+                function FarMenuBtn() {
+                    if (VarSideNav.style.right == "-250px") {
+                        VarSideNav.style.right = "0";
+                        console.log("fui para zero")
+                    } else {
+                        VarSideNav.style.right = "-250px";
+                        console.log("fui para 250")
+                    }
+                }
+
+            </script>
+        </section>
+    </header>
+
+    <section id="about">
+        <div class="about-left-col">
+            <img src="img/about.png" alt="about">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>Sobre nós</h1>
+                <span class="sqaure"></span>
+                <p>Conheça mais sobre nossa história e missão. Estamos comprometidos em oferecer educação de qualidade e
+                    experiências enriquecedoras para todos os nossos alunos. Nossa jornada é guiada pelo desejo de
+                    inspirar o aprendizado contínuo e capacitar as mentes do futuro.</p>
+                <br><br>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+                <h2>"Acreditamos que cada indivíduo tem o potencial de alcançar o sucesso acadêmico e pessoal"</h2>
+
+                <h3>-----Alirio Marques</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="feature-row">
+            <div class="feature-col">
+                <img src="img/pic-1.png" alt="">
+                <h4>Aprenda em qualquer lugar</h4>
+                <p>Tenha a flexibilidade de acessar materiais de aprendizado e participar de aulas de qualquer lugar.
+                    Nossa plataforma online oferece a conveniência de aprender no seu próprio ritmo, adaptando-se ao seu
+                    estilo de vida.</p>
+            </div>
+
+            <div class="feature-col">
+                <img src="img/pic-2.png" alt="">
+                <h4>Professores especializados</h4>
+                <p>Conte com a orientação de professores experientes e qualificados em suas áreas de atuação. Nossos
+                    educadores estão comprometidos em fornecer uma experiência de aprendizado envolvente e de alta
+                    qualidade.</p>
+            </div>
+
+            <div class="feature-col">
+                <img src="img/pic-3.png" alt="">
+                <h4>Acesso ilimitado</h4>
+                <p>Desfrute de acesso ilimitado a recursos educacionais, bibliotecas digitais e ferramentas de
+                    aprendizado avançadas. Nossa plataforma é projetada para oferecer uma experiência de aprendizado
+                    abrangente e personalizada.</p>
+            </div>
+        </div>
+
+        <div class="feature-btn">
+            <div class="line">
+                <span class="line-1"></span><br>
+                <span class="line-2"></span><br>
+                <span class="line-3"></span>
+            </div>
+            <button class="common-btn">Iniciar Teste Gratuito</button>
+        </div>
+
+    </section>
+
+    <section id="courses">
+        <div class="container course-row">
+            <div class="course-left-col">
+                <div class="course-text">
+                    <h1>Explore nossos principais <br> cursos </h1>
+                    <div class="sqaure"></div>
+                    <p>Descubra uma variedade de cursos que oferecem conhecimento e oportunidades de aprendizado
+                        excepcionais para impulsionar sua jornada educacional.</p>
+                    <button class="common-btn">Ver Todos os Cursos</button>
+                    <div class="line">
+                        <div class="line">
+                            <span class="line-1"></span><br>
+                            <span class="line-2"></span><br>
+                            <span class="line-3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-right-col">
+                <img src="img/course.png" alt="Cursos">
+            </div>
+        </div>
+    </section>
+
+    <!-- offer -->
+    <section id="offer">
+        <div class="about-left-col">
+            <img src="img/offer.png" alt="about">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>Aprendizado Ilimitado, <br> Possibilidades Ilimitadas</h1>
+                <span class="sqaure"></span>
+                <p>Explore um mundo de aprendizado sem limites e desbloqueie possibilidades infinitas para o seu
+                    crescimento educacional. Na nossa plataforma, você terá acesso a uma ampla variedade de cursos e
+                    recursos, preparados para atender às suas necessidades de aprendizado. Acreditamos que o aprendizado
+                    contínuo é a chave para o sucesso e estamos comprometidos em oferecer uma experiência educacional
+                    excepcional.</p>
+                <button class="common-btn">Iniciar Teste Gratuito</button>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+
+    <section id="contact">
+        <div class="container contact-row">
+            <div class="contact-left-col">
+                <h1>Inscreva-se para fazer parte da nossa <br> comunidade de aprendizado</h1>
+                <form>
+                    <input type="text" placeholder="Digite seu nome">
+                    <input type="email" placeholder="Digite o seu e-mail">
+                    <input type="password" placeholder="Senha">
+                    <div class="btn-box">
+                        <button class="common-btn">Regitrar</button>
+                        <button class="common-btn">Iniciar Teste Gratuito</button>
+                    </div>
+                </form>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="contact-height-col">
+                <img src="img/contact.png" alt="Contato">
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container footer-row">
+            <hr>
+
+            <div class="footer-left-col">
+                <div class="footer-links">
+                    <div class="link-title">
+                        <h4>Produto</h4>
+                        <small>Nossos planos</small><br>
+                        <small>Trial grátis</small>
+                    </div>
+                    <div class="link-title">
+                        <h4>Sobre Nós</h4>
+                        <small>Pedir Demonstração</small><br>
+                        <small>FAQs</small>
+                    </div>
+                    <div class="link-title">
+                        <h4>Suporte</h4>
+                        <small>Recursos</small><br>
+                        <small>Contate-nos</small>
+                    </div>
+                    <div class="link-title">
+                        <h4>Explorar</h4>
+                        <small>Encontre uma organização sem fins lucrativos</small><br>
+                        <small>Soluções corporativas</small>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-height-col">
+                <div class="footer-info">
+                    <div class="copyright-text">
+                        <small>suporte@xypo.com.br</small>
+                        <small>copyright 2024 Xypo</small>
+                    </div>
+                    <div class="footer-logo">
+                        <img src="img/logo.png" alt="logo">
+                        <button class="common-btn">Português</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- social -->
+    <div class="social-icons">
+        <img src="img/facebook.png" alt="facebook">
+        <img src="img/instagram.png" alt="instagram">
+        <img src="img/twitter.png" alt="twitter">
+        <img src="img/linkedin.png" alt="linkedin">
+    </div>
+
+
+</body>
+
+</html>
